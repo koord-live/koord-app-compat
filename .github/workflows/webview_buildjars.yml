@@ -37,7 +37,7 @@ jobs:
         run:                        ./.github/autobuild/webview_jars.sh get-artifacts
 
       - name:                       Upload Artifact 1 to Job
-        uses:                       actions/upload-artifact@v2
+        uses:                       actions/upload-artifact@v3
         with:
           name:                     ${{ steps.get-artifacts.outputs.artifact_1 }}
           path:                     deploy/${{ steps.get-artifacts.outputs.artifact_1 }}
@@ -45,7 +45,7 @@ jobs:
           if-no-files-found:        error
 
       - name:                       Upload Artifact 2 to Job
-        uses:                       actions/upload-artifact@v2
+        uses:                       actions/upload-artifact@v3
         with:
           name:                     ${{ steps.get-artifacts.outputs.artifact_2 }}
           path:                     deploy/${{ steps.get-artifacts.outputs.artifact_2 }}
@@ -53,7 +53,7 @@ jobs:
           if-no-files-found:        error
 
       - name:                       Upload Artifact 3 to Job
-        uses:                       actions/upload-artifact@v2
+        uses:                       actions/upload-artifact@v3
         with:
           name:                     ${{ steps.get-artifacts.outputs.artifact_3 }}
           path:                     deploy/${{ steps.get-artifacts.outputs.artifact_3 }}
@@ -61,7 +61,7 @@ jobs:
           if-no-files-found:        error
 
       - name:                       Upload Artifact 4 to Job
-        uses:                       actions/upload-artifact@v2
+        uses:                       actions/upload-artifact@v3
         with:
           name:                     ${{ steps.get-artifacts.outputs.artifact_4 }}
           path:                     deploy/${{ steps.get-artifacts.outputs.artifact_4 }}
